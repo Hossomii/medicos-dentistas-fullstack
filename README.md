@@ -1,75 +1,102 @@
 ![React](https://img.shields.io/badge/React-JS-61DAFB?logo=react&logoColor=white&style=flat)
-#  Médicos & Dentistas — Site Institucional (React + Vite)
 
-> Projeto front-end que entrega uma **landing page moderna** voltada para profissionais de saúde (médicos & dentistas), com foco em apresentação de serviços e navegação simples e acessível.
+# Médicos & Dentistas — Site Institucional (React + Vite)
 
----
+> 🎓 **Projeto Acadêmico – Módulo de Frontend**
 
-##  Sobre o projeto
-
-Este repositório contém uma aplicação web criada com **React + Vite**, com o objetivo de servir como **site institucional responsivo** para médicos, dentistas ou clínicas, onde é possível exibir serviços, informações de contato e conteúdo relevante para pacientes ou visitantes.
-
-O projeto não depende de backend (API) para funcionar — trabalha com componentes estáticos que podem ser facilmente adaptados e expandidos.
+Este projeto foi desenvolvido como atividade prática do módulo de Frontend do curso FullStack da Vai na Web, com o objetivo de construir uma **landing page institucional moderna**, aplicando conceitos de componentização, organização de código e responsividade utilizando React + Vite, seguindo o padrão disponibilizado no figma.
 
 ---
 
-##  Tecnologias usadas
+## 📌 Contexto Acadêmico
+
+A proposta do projeto foi desenvolver um **site institucional responsivo** voltado para profissionais da área da saúde (médicos e dentistas), simulando um cenário real de mercado.
+
+O foco principal foi:
+
+- Estruturação de projeto com React + Vite
+- Separação de responsabilidades por componentes
+- Organização escalável de pastas
+- Boas práticas de estilização
+- Criação de layout moderno e responsivo
+
+O projeto não utiliza backend ou API, sendo totalmente front-end e baseado em componentes estáticos, com possibilidade de futura expansão.
+
+---
+
+## 📖 Sobre o Projeto
+
+Aplicação web desenvolvida para servir como modelo de **site institucional para clínicas ou profissionais da saúde**, permitindo exibição de:
+
+- Serviços oferecidos
+- Informações institucionais
+- Contato
+- Conteúdo voltado a pacientes ou visitantes
+
+A aplicação foi construída como SPA leve e otimizada para fácil manutenção.
+
+---
+
+## 🛠 Tecnologias Utilizadas
 
 | Tecnologias | Função no projeto |
 |-------------|------------------|
-| **React** | Biblioteca para construção de UI |
-| **Vite** | Ferramenta de bundling e dev server rápido |
-| **JavaScript (ES6+)** | Lógica de componentes |
-| **HTML & CSS / SCSS** | Estrutura e estilo das páginas |
-
+| **React** | Construção da interface de usuário |
+| **Vite** | Bundler e servidor de desenvolvimento rápido |
+| **JavaScript (ES6+)** | Lógica e estrutura dos componentes |
+| **HTML & CSS / SCSS** | Estruturação e estilização da interface |
 
 ---
 
-##  O que você há nesse código
+## 🚀 O que este projeto demonstra
 
-✔ Estrutura de um projeto com React + Vite  
-✔ Organização de componentes em pastas  
-✔ CSS modular ou pré-processado (SCSS)  
-✔ Boas práticas de commit e organização de código
+✔ Estrutura profissional com React + Vite  
+✔ Organização modular de componentes  
+✔ Separação clara entre páginas e UI reutilizável  
+✔ Estilização estruturada (CSS / SCSS)  
+✔ Boas práticas de organização de código  
 
+---
+
+## ▶ Como rodar o projeto
 
 1. **Clone este repositório**
    ```bash
    git clone https://github.com/Hossomii/medicos-dentistas-vnw.git
-2. **Entre na pasta**
+   ```
+
+2. **Entre na pasta do projeto**
    ```bash
    cd medicos-dentistas-vnw
-4. **Instale as Dependências**
+   ```
+
+3. **Instale as dependências**
    ```bash
    npm install
-5. **Rode o Servidor de Desenvolvimento**
+   ```
+
+4. **Inicie o servidor de desenvolvimento**
    ```bash
    npm run dev
-6. **Abra o Servidor**
-   ```bash
+   ```
+
+5. **Acesse no navegador**
+   ```
    http://localhost:5173
-   
-Você verá uma interface básica pronta para ser customizada.
+   ```
 
-🤝 Contribuição
+Você verá uma interface institucional pronta para ser customizada.
 
-1. Contribuições são bem-vindas! Para melhorias:
-2. Faça um fork deste repositório
-3. Crie uma feature branch (git checkout -b feature/AmazingFeature)
-4. Commit suas mudanças (git commit -m 'Add amazing feature')
-5. Push para a branch
-6. Abra um Pull Request
+---
 
-📝 Licença
-Este projeto está sob a licença MIT — sinta-se livre para usar e adaptar.
+## 🏗 Estrutura do Projeto
 
-## Estrutura do Projeto
-```markdown
+```
 /
 ├─ public/                ⟶ arquivos estáticos (ícones, imagens)
 ├─ src/
-│   ├─ assets/            ⟶ imagens, fontes
-│   ├─ components/        ⟶ pequenos blocos UI reutilizáveis
+│   ├─ assets/            ⟶ imagens e fontes
+│   ├─ components/        ⟶ componentes reutilizáveis de UI
 │   ├─ pages/             ⟶ páginas completas
 │   ├─ styles/            ⟶ arquivos SCSS / CSS globais
 │   ├─ App.jsx            ⟶ componente raiz
@@ -77,3 +104,22 @@ Este projeto está sob a licença MIT — sinta-se livre para usar e adaptar.
 ├─ .gitignore
 ├─ package.json
 └─ vite.config.js
+```
+
+---
+
+## 🎯 Competências Demonstradas
+
+- Criação de landing page institucional moderna
+- Estruturação escalável com React
+- Organização modular de código
+- Responsividade aplicada
+- Boas práticas de frontend
+
+---
+
+## 👨‍💻 Desenvolvido por
+
+Anthony Silveira  
+Estudante de Análise e Desenvolvimento de Sistemas  
+Foco em Frontend Development
