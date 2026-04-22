@@ -1,0 +1,91 @@
+@use "./variables" as *;
+
+@mixin buttonPrimary(
+  $padding: 14px 22px,
+  $font-size: $font-base,
+  $radius: $radius-md
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: $padding;
+  border: none;
+  border-radius: $radius;
+  font-size: $font-size;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color $transition-default;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+@mixin buttonOutline(
+  $padding: 14px 22px,
+  $font-size: $font-base,
+  $radius: $radius-md
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: $color-primary;
+  padding: $padding;
+  border: 1px solid $color-primary;
+  border-radius: $radius;
+  font-size: $font-size;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-default;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+@mixin inputDefault(
+  $padding: 14px 20px,
+  $radius: $radius-sm
+) {
+  width: 100%;
+  padding: $padding;
+  background-color: $color-gray-light;
+  border: 1px solid $color-gray-border;
+  border-radius: $radius;
+  font-size: $font-base;
+  outline: none;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $color-gray-medium;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+@mixin paragraphSmall {
+  color: $color-white;
+  font-size: $font-sm;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+@mixin sectionContainer($padding: 5rem 8rem) {
+  padding: $padding;
+}
+
+@mixin flexCenter($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}

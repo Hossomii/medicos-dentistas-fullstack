@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
-import Home from './pages/home/Home'
-import Voluntario from './pages/voluntario/Voluntario'
-import './globalStyle.scss'
+import Header from '@/components/Header/index'
+import Footer from '@/components/Footer/index'
+import Home from '@/pages/Home/index'
+import Voluntario from '@/pages/Voluntario/index'
+import '@/styles/global.scss'
 
 function App() {
 

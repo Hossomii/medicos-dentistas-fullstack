@@ -1,0 +1,409 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+/* ===== HERO / BANNER ===== */
+
+.mainBannerContainer {
+  width: 100%;
+}
+
+.mainSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.mainDiv {
+  width: 50%;
+  padding: 2rem 0 2rem 8rem;
+}
+
+.texts {
+  width: 70%;
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.15;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  p {
+    margin-top: 30px;
+    font-size: 1.563rem;
+    line-height: 40px;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 15px 0 60px;
+  padding: 40px 0;
+}
+
+.btnVerde {
+  @include buttonPrimary(16px 22px, $font-xl, $radius-md);
+}
+
+.btnComoAjudar {
+  @include buttonOutline(16px 32px, $font-xl, $radius-md);
+}
+
+.saudeTodosContainer {
+  display: flex;
+  margin: 6rem 0 2.5rem;
+}
+
+.btnSaudeTodos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: $color-gray-soft;
+  border: none;
+  border-radius: $radius-xl;
+  padding: 12px 20px;
+  font-size: $font-lg;
+  font-weight: 500;
+  transition: background-color $transition-default;
+  cursor: pointer;
+
+  img {
+    width: 32px;
+  }
+
+  &:hover {
+    background-color: $color-gray-hover;
+  }
+}
+
+.mainSection article {
+  width: 50%;
+  padding: 0 8rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+  }
+}
+
+/* ===== CARDS VERDES ===== */
+
+.cardsSection {
+  background-color: $color-primary;
+}
+
+.cardsDiv {
+  padding: 5rem 8rem;
+}
+
+.cardsTituloSection {
+  color: $color-white;
+  font-size: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+.cardsDescricaoSection {
+  color: $color-white;
+  font-size: 1.4rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ===== CARDS BRANCOS ===== */
+
+.cardsSection2 {
+  background-color: $color-white;
+}
+
+.cardsDiv2 {
+  padding: 5rem 8rem;
+}
+
+.cardsTituloSection2 {
+  color: $color-text;
+  font-size: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+
+.cardsDescricaoSection2 {
+  color: $color-text;
+  font-size: 1.4rem;
+}
+
+.cards2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* ===== DESKTOP MÉDIO ===== */
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .mainSection {
+    padding: 3rem 4rem;
+    gap: 2rem;
+  }
+
+  .mainDiv {
+    width: 50%;
+    padding: 2rem 4rem;
+  }
+
+  .mainSection article {
+    width: 50%;
+    padding: 0 2rem 2rem;
+  }
+
+  .texts {
+    width: 90%;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 34px;
+    }
+  }
+
+  .btnContainer {
+    padding: 30px 0;
+  }
+
+  .btnVerde,
+  .btnComoAjudar {
+    width: fit-content;
+    font-size: 1.2rem;
+  }
+
+  .cardsDiv,
+  .cardsDiv2 {
+    padding: 4rem 6rem;
+  }
+
+  .cardsTituloSection,
+  .cardsTituloSection2 {
+    font-size: 3.2rem;
+  }
+
+  .cardsDescricaoSection,
+  .cardsDescricaoSection2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===== TABLET ===== */
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  .mainSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .mainDiv {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainSection article {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 480px;
+    }
+  }
+
+  .texts {
+    width: 100%;
+    max-width: 700px;
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 1.25;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 30px;
+      margin-top: 25px;
+    }
+  }
+
+  .btnContainer {
+    width: 100%;
+    margin: 20px 0 40px;
+    padding: 20px 0;
+    justify-content: center;
+  }
+
+  .btnVerde,
+  .btnComoAjudar {
+    width: 70%;
+    max-width: 380px;
+  }
+
+  .saudeTodosContainer {
+    justify-content: center;
+  }
+
+  .btnSaudeTodos {
+    font-size: 1.1rem;
+    padding: 14px 22px;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .cardsDiv,
+  .cardsDiv2 {
+    padding: 4rem 3rem;
+  }
+
+  .cardsTituloSection,
+  .cardsTituloSection2 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .cardsDescricaoSection,
+  .cardsDescricaoSection2 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cards,
+  .cards2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 500px) {
+  .mainSection {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .mainDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .mainSection article {
+    padding: 0;
+    margin: 0;
+
+    img {
+      display: none;
+    }
+  }
+
+  .texts {
+    width: 100%;
+    max-width: 600px;
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      line-height: 28px;
+    }
+  }
+
+  .btnContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+  }
+
+  .btnVerde,
+  .btnComoAjudar {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  .saudeTodosContainer {
+    justify-content: center;
+    margin: 3rem 0 1rem;
+  }
+
+  .btnSaudeTodos {
+    padding: 12px 20px;
+    font-size: 1rem;
+
+    img {
+      width: 28px;
+    }
+  }
+
+  .cardsDiv,
+  .cardsDiv2 {
+    padding: 3rem 1.5rem;
+  }
+
+  .cardsTituloSection {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .cardsTituloSection2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .cardsDescricaoSection,
+  .cardsDescricaoSection2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .cards,
+  .cards2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

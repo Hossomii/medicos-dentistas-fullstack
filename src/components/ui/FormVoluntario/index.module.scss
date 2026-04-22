@@ -1,0 +1,219 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.formVoluntarioContainer {
+  background-color: $color-white;
+  width: 90%;
+  max-width: 1300px;
+  min-height: 700px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  border-radius: $radius-lg;
+  border: 1px solid $color-text;
+}
+
+.formTitleContainer {
+  margin-bottom: 40px;
+}
+
+.formTitle {
+  font-size: $font-2xl;
+}
+
+.formVoluntario {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  display: block;
+  font-size: $font-md;
+  font-weight: 700;
+  margin: 22px 0;
+}
+
+.inputsLine1Container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  flex: 1;
+
+  input {
+    @include inputDefault;
+  }
+}
+
+.inputsLine2 {
+  input {
+    @include inputDefault;
+  }
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageContainer textarea {
+  @include inputDefault(12px 20px, $radius-sm);
+  height: 200px;
+  resize: none;
+}
+
+.infoText {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: $font-lg;
+}
+
+.submitButton {
+  display: block;
+  margin: 0 auto 20px;
+  @include buttonPrimary(20px 38px, $font-xl, $radius-md);
+}
+
+.mensagemEnviada {
+  width: 100%;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 60px 40px;
+
+  img {
+    max-width: 200px;
+  }
+
+  p {
+    font-size: $font-lg;
+    color: $color-text;
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+}
+
+/* ===== TABLET ===== */
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  .formVoluntarioContainer {
+    width: 94%;
+    padding: 32px 24px;
+    min-height: 620px;
+  }
+
+  .formTitle {
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .inputsLine1Container {
+    flex-direction: column;
+  }
+
+  .infoText {
+    font-size: 1.1rem;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+
+  .mensagemEnviada {
+    padding: 40px 24px;
+
+    img {
+      max-width: 170px;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 500px) {
+  .formVoluntarioContainer {
+    width: 95%;
+    padding: 24px 18px;
+    min-height: 550px;
+  }
+
+  .formTitleContainer {
+    margin-bottom: 24px;
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .fieldset {
+    margin: 0;
+    padding: 0;
+  }
+
+  .inputsLine1Container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .legend {
+    font-size: $font-base;
+    margin: 18px 0;
+  }
+
+  .inputsLine2 input {
+    padding: 12px 16px;
+  }
+
+  .messageContainer textarea {
+    height: 150px;
+    padding: 10px 14px;
+  }
+
+  .infoText {
+    font-size: $font-base;
+    margin-top: 12px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    border-radius: $radius-sm;
+  }
+
+  .mensagemEnviada {
+    min-height: 480px;
+    padding: 20px;
+
+    img {
+      max-width: 150px;
+    }
+
+    p {
+      width: 100%;
+      padding: 0 20px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+  }
+}

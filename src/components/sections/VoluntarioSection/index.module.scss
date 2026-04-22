@@ -1,0 +1,128 @@
+@use "@/styles/variables" as *;
+
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $color-white;
+}
+
+.cardsDiv {
+  padding: 5rem 8rem;
+}
+
+.cardsTituloSection {
+  color: $color-text;
+  font-size: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardsDescricaoSection {
+  color: $color-text;
+  font-size: $font-lg;
+  font-weight: 300;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.formSection {
+  background-color: $color-primary;
+}
+
+.formContainer {
+  padding: 90px 0;
+}
+
+/* ===== LAPTOP ===== */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .cardsDiv {
+    padding: 4rem 5rem;
+  }
+
+  .cardsTituloSection {
+    font-size: 3rem;
+  }
+
+  .cardsDescricaoSection {
+    font-size: 1.15rem;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .formContainer {
+    padding: 70px 0;
+  }
+}
+
+/* ===== TABLET ===== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .cardsSection {
+    text-align: center;
+  }
+
+  .cardsDiv {
+    padding: 3.5rem 3rem;
+  }
+
+  .cardsTituloSection {
+    font-size: 2.8rem;
+  }
+
+  .cardsDescricaoSection {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .formContainer {
+    padding: 60px 0;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+  .cardsSection {
+    text-align: center;
+  }
+
+  .cardsDiv {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cardsTituloSection {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cardsDescricaoSection {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .formContainer {
+    padding: 45px 0;
+  }
+}
