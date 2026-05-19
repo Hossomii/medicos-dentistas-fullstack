@@ -1,4 +1,4 @@
-# 🩺 Médicos & Dentistas Fullstack
+# 🩺 Médicos & Dentistas
 
 Aplicação fullstack desenvolvida com foco em arquitetura moderna, integração entre frontend e backend, persistência de dados e boas práticas de desenvolvimento.
 
