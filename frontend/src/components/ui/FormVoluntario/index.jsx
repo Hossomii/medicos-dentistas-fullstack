@@ -1,14 +1,40 @@
-import { useState } from "react"
-import s from "./index.module.scss"
-import checkIcon from "@/assets/check-mark.png"
+import api from "@/services/api";
+import { useState } from "react";
+import s from "./index.module.scss";
+import checkIcon from "@/assets/check-mark.png";
 
 const FormVoluntario = () => {
-  const [enviado, setEnviado] = useState(false)
+  const [enviado, setEnviado] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setEnviado(true)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setErrorMessage("");
+
+    const formData = new FormData(e.target);
+
+    const volunteerData = {
+      name: formData.get("firstName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      message: formData.get("message"),
+    };
+
+    try {
+      await api.post("/volunteers", volunteerData);
+      setEnviado(true);
+      e.target.reset();
+    } catch (error) {
+      setErrorMessage(
+        error.response?.data?.message || "Erro ao enviar inscrição"
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className={s.formVoluntarioContainer}>
@@ -80,22 +106,31 @@ const FormVoluntario = () => {
                 id="message"
                 name="message"
                 rows="10"
+                required
                 placeholder="Conte-nos porque você quer ser voluntário..."
-              ></textarea>
+              />
             </div>
 
             <p className={s.infoText}>
               Entraremos em contato para mais informações
             </p>
 
-            <button type="submit" className={s.submitButton}>
-              Enviar Inscrição
+            {errorMessage && (
+              <p className={s.errorMessage}>{errorMessage}</p>
+            )}
+
+            <button
+              type="submit"
+              className={s.submitButton}
+              disabled={loading}
+            >
+              {loading ? "Enviando..." : "Enviar Inscrição"}
             </button>
           </form>
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default FormVoluntario
+export default FormVoluntario;

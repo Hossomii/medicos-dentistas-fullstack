@@ -1,130 +1,349 @@
-# 🩺 Médicos & Dentistas
+# 🩺 Médicos & Dentistas Fullstack
 
-Aplicação web institucional desenvolvida com **React + Vite**, focada em **componentização, organização de código e responsividade**, simulando um projeto real voltado para impacto social na área da saúde.
+Aplicação fullstack desenvolvida com foco em arquitetura moderna, integração entre frontend e backend, persistência de dados e boas práticas de desenvolvimento.
 
----
-
-## 🚀 Demonstração
-
-### 🏠 Home
-![Home](./src/assets/Screenshots/home.png)
-
-### 🤝 Página de Voluntariado
-![Voluntário](./src/assets/Screenshots/voluntario.png)
+O projeto simula uma plataforma institucional voltada para impacto social na área da saúde, permitindo cadastro de voluntários através de uma API REST integrada a um banco PostgreSQL.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+# 🚀 Tecnologias Utilizadas
 
+## Frontend
 - React.js
 - Vite
 - JavaScript (ES6+)
 - SCSS Modules
+- Axios
 - React Router DOM
+
+## Backend
+- Node.js
+- Express
+- Prisma ORM
+- PostgreSQL
+- Zod
+- Helmet
+- CORS
+- Nodemon
 
 ---
 
-## 📂 Estrutura do Projeto
+# 🧱 Arquitetura da Aplicação
 
-```bash
-src/
-│
-├── assets/
-│   ├── Screenshots/
-│   └── imagens gerais
-│
-├── components/
-│   ├── Header/
-│   ├── Footer/
-│   ├── ui/
-│   └── sections/
-│
-├── pages/
-│   ├── Home/
-│   └── Voluntario/
-│
-├── styles/
-│   ├── global.scss
-│   ├── variables.scss
-│   └── mixins.scss
+```txt
+Frontend React
+↓
+Axios API Layer
+↓
+Express REST API
+↓
+Prisma ORM
+↓
+PostgreSQL
 ```
 
 ---
 
-## ✨ Funcionalidades
+# ✨ Funcionalidades
 
-- Página institucional responsiva  
-- Página dedicada para voluntariado  
-- Formulário com validação básica  
-- Componentes reutilizáveis (Cards, Layout, UI)  
-- Organização escalável de estilos com SCSS Modules  
-- Sistema de variáveis e mixins (design system básico)  
+## Frontend
+- Interface responsiva
+- Página institucional
+- Página de voluntariado
+- Feedback visual de envio
+- Estados de loading
+- Tratamento visual de erros
+- Componentização reutilizável
 
----
-
-## 🎯 Diferenciais Técnicos
-
-- 📦 Separação clara entre **UI, Sections e Pages**  
-- 🎨 Uso de **SCSS Modules** para isolamento de estilos  
-- 🧩 Componentização reutilizável (ex: `InfoCard`)  
-- 🧠 Uso de **variables.scss + mixins.scss** para padronização  
-- 📱 Responsividade para mobile, tablet e desktop  
-- 🧱 Estrutura pensada para crescimento do projeto  
-
----
-
-## 📚 Aprendizados
-
-Este projeto foi essencial para consolidar:
-
-- Organização de projetos React  
-- Arquitetura de componentes  
-- Reutilização de estilos com SCSS  
-- Responsividade na prática  
-- Separação de responsabilidades (UI vs lógica)  
+## Backend
+- API REST
+- Cadastro de voluntários
+- Integração com PostgreSQL
+- Validação de dados com Zod
+- Middleware global de erros
+- Tratamento de status HTTP
+- Arquitetura em camadas
+- Persistência real de dados
 
 ---
 
-## 📦 Como rodar o projeto
+# 🛠️ Diferenciais Técnicos
+
+- 📦 Arquitetura Fullstack organizada
+- 🧩 Separação de responsabilidades
+- 🧠 Backend estruturado em camadas
+- 🗄️ Persistência com PostgreSQL
+- 🔒 Validação profissional com Zod
+- ⚡ Integração React + API REST
+- 🚨 Middleware global de erros
+- 📱 Responsividade para mobile e desktop
+- 🧱 Estrutura preparada para escalabilidade
+- 🔄 Sistema de migrations com Prisma
+
+---
+
+# 📂 Estrutura do Projeto
 
 ```bash
-# Clone o repositório
-git clone https://github.com/Hossomii/medicos-dentistas-vnw.git
+medicos-dentistas-fullstack/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── styles/
+│   │
+│   └── package.json
+│
+├── backend/
+│   ├── controllers/
+│   ├── database/
+│   ├── middlewares/
+│   ├── prisma/
+│   ├── routes/
+│   ├── schemas/
+│   ├── services/
+│   ├── src/
+│   ├── .env.example
+│   └── package.json
+│
+└── README.md
+```
 
-# Acesse a pasta
-cd medicos-dentistas-vnw
+---
 
-# Instale as dependências
+# 🧠 Conceitos Aplicados
+
+## Frontend
+- Componentização
+- Estado assíncrono
+- Integração com API
+- Tratamento de loading/error
+- Responsividade
+- Organização escalável
+
+## Backend
+- REST API
+- Middleware Pattern
+- Layered Architecture
+- ORM
+- Schema Validation
+- Error Handling
+- Async/Await
+- Database Migrations
+
+---
+
+# 📸 Demonstração
+
+## 🏠 Home
+![Home](./frontend/src/assets/Screenshots/home.png)
+
+## 🤝 Página de Voluntariado
+![Voluntário](./frontend/src/assets/Screenshots/voluntario.png)
+
+---
+
+# ⚙️ Como Rodar o Projeto
+
+# 1️⃣ Clone o repositório
+
+```bash
+git clone https://github.com/Hossomii/medicos-dentistas-fullstack.git
+```
+
+---
+
+# 2️⃣ Entre na pasta
+
+```bash
+cd medicos-dentistas-fullstack
+```
+
+---
+
+# 🔧 Backend
+
+## Acesse a pasta backend
+
+```bash
+cd backend
+```
+
+## Instale as dependências
+
+```bash
 npm install
+```
 
-# Rode o projeto
+## Configure o .env
+
+Crie um arquivo `.env` baseado no `.env.example`
+
+```env
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/medicos_dentistas"
+PORT=3000
+```
+
+## Execute as migrations
+
+```bash
+npx prisma migrate dev
+```
+
+## Rode o servidor
+
+```bash
 npm run dev
 ```
 
 ---
 
-## 🌐 Deploy
+# 💻 Frontend
 
+## Acesse a pasta frontend
+
+```bash
+cd frontend
 ```
+
+## Instale as dependências
+
+```bash
+npm install
+```
+
+## Rode a aplicação
+
+```bash
+npm run dev
+```
+
+---
+
+# 🌐 Rotas da API
+
+## Health Check
+
+```http
+GET /health
+```
+
+---
+
+## Criar voluntário
+
+```http
+POST /volunteers
+```
+
+### Body
+
+```json
+{
+  "name": "Anthony",
+  "email": "anthony@email.com",
+  "phone": "11999999999",
+  "message": "Quero ajudar como voluntário"
+}
+```
+
+---
+
+## Listar voluntários
+
+```http
+GET /volunteers
+```
+
+---
+
+# 🗄️ Banco de Dados
+
+O projeto utiliza PostgreSQL com Prisma ORM.
+
+## Model atual
+
+```prisma
+model Volunteer {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  phone      String
+  message    String
+  createdAt  DateTime @default(now())
+}
+```
+
+---
+
+# 📚 Aprendizados
+
+Este projeto foi essencial para consolidar conhecimentos em:
+
+- Integração frontend/backend
+- Arquitetura fullstack
+- APIs REST
+- PostgreSQL
+- Prisma ORM
+- Validação de dados
+- Tratamento de erros
+- Persistência real
+- Estrutura escalável
+- Organização profissional de código
+
+---
+
+# 🚀 Roadmap
+
+- [x] Frontend React
+- [x] Backend Express
+- [x] PostgreSQL integration
+- [x] Prisma ORM
+- [x] Form validation
+- [x] Middleware global de erros
+- [x] Integração fullstack
+- [ ] Sistema de autenticação
+- [ ] Dashboard administrativo
+- [ ] Painel de gerenciamento
+- [ ] Sistema de emails
+- [ ] Deploy do backend
+- [ ] Testes automatizados
+
+---
+
+# 🌐 Deploy Frontend
+
+```txt
 https://medicos-e-dentistas-zeta.vercel.app/
 ```
 
 ---
 
-## 👨‍💻 Autor
+# 👨‍💻 Autor
 
-**Anthony Hossomi**
+## Anthony Hossomi
 
-- 💼 Focado em Desenvolvimento Frontend  
-- 🎯 Em evolução para projetos reais e oportunidades profissionais  
-- 🚀 Interesse em interfaces interativas e experiências gamificadas  
+Desenvolvedor focado em:
+- Frontend
+- Backend
+- Arquitetura Fullstack
+- React
+- Node.js
+- PostgreSQL
+- Experiências interativas
+
+🔗 LinkedIn:
+https://www.linkedin.com/in/anthony-silveira-bugs/
+
+🔗 GitHub:
+https://github.com/Hossomii
 
 ---
 
-## 📌 Status do Projeto
+# 📌 Status do Projeto
 
-✅ Finalizado (versão inicial)  
-🔄 Possível evolução futura com:  
-- Backend integrado  
-- Sistema real de cadastro  
-- Dashboard administrativo  
+✅ Em desenvolvimento ativo  
+🚀 Evoluindo continuamente para uma aplicação fullstack completa
